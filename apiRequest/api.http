@@ -1,0 +1,45 @@
+### Get infromation of ditto pokemon
+GET http://localhost:3001/movies
+### OTHER get
+GET http://localhost:3001/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0
+
+### GET
+
+GET http://localhost:3001/movies?genre=action
+### to create a new movie
+POST http://localhost:3001/movies
+Content-Type: application/json
+
+{
+    "sql": "SELECT * FROM users",
+    "title": "Good father",
+  "year": 2009,
+  "director": "James Try",
+  "duration": 162,
+  "poster": "https://i.etsystatic.com/35681979/r/il/dfe3ba/3957859451/il_fullxfull.3957859451_h27r.jpg",
+  "genre": [
+    "Action",
+    "Adventure",
+    "Fantasy"
+  ]
+}
+### update a movie
+PATCH http://localhost:3001/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "sql": "SELECT * FROM users",
+
+  "director": "Ja4ry",
+  "duration": 150,
+  "poster": "https://i.etsystatic.com/35681979/r/il/dfe3ba/3957859451/il_fullxfull.3957859451_h27r.jpg",
+  "genre": [
+    "Action",
+    
+    "Fantasy"
+  ]
+}
+
+### deletee a movie
+
+DELETE http://localhost:3001/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
